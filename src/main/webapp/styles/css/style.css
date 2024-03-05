@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+* {
+	background-color: gray;
+}
+.container {
+	text-align: center;
+}
+.button {
+	color: yellow;
+	font-size: 40px;
+	margin: 3px;
+}
+.submit_btn {
+	color: yellow;
+	font-size: 40px;
+	margin: 3px;
+}
