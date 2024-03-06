@@ -13,7 +13,7 @@
 			<h1>Welcome to Calculator</h1>
 			<form action="calculator" method="post">
 				<input type="hidden" id="tmpInput" name="label">
-				<h1 id="label">${result}</h1>
+				<h2 id="label" class="result">${result}</h2>
 				<button class="submit_btn" type="submit">=</button>
 			</form>
 		</div>
@@ -32,9 +32,10 @@
 		<div class="operator">
 			<button class="button" onclick="changeText( '+' )">+</button>
 			<button class="button" onclick="changeText( '-' )">-</button>
-			<button class="button" onclick="changeText( '*' )">*</button>
-			<button class="button" onclick="changeText( '/' )">/</button>
+			<button class="button" onclick="changeText( '*' )">✖︎️</button>
+			<button class="button" onclick="changeText( '/' )">÷</button>
 			<button class="button" onclick="deleteLabel()">Clear</button>
+			<button class="button" onclick="deleteOneLabel()">Delete</button>
 		</div>
 	</div>
 	<script>
@@ -52,6 +53,12 @@
 		function deleteLabel() {
 			document.getElementById("label").textContent = "";
 			document.getElementById("tmpInput").value  = "";
+		}
+		function deleteOneLabel() {
+			var tmp = document.getElementById("label").textContent;
+			console.log(tmp);
+			document.getElementById("label").textContent = tmp.substr(0, [tmp.length - 2]);
+			document.getElementById("tmpInput").value  = tmp.substr(0, [tmp.length - 2]);
 		}
 	</script>
 </body>
