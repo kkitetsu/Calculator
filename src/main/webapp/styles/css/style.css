@@ -50,9 +50,10 @@
 	
 	.container {
 	    display: flex;
-	    flex-wrap: wrap;
-	    justify-content: center;
-	    max-width: 200px; 
+	    flex-direction: column;
+	    justify-content: center; /* Center aligns flex items horizontally */
+	    align-items: center; /* Center aligns flex items vertically */
+	    height: 100vh; 
 	}
 	
 	.container input {
